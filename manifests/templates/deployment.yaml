@@ -1,0 +1,24 @@
+---
+# Source: helm for kubernetes/templates/deployment.yaml
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: bunath
+  labels:
+    app: bunath
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: bunath
+  template:
+    metadata:
+      labels:
+        app: bunath
+    spec:
+      containers:
+        - name: bunath
+          image: docker.io/phengbunath/bunath:1
+          imagePullPolicy: Always
+          ports:
+            - containerPort: 8080
