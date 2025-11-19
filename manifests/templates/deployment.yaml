@@ -8,6 +8,7 @@ metadata:
     app: bunath
 spec:
   replicas: 1
+  revisionHistoryLimit: 2
   selector:
     matchLabels:
       app: bunath
